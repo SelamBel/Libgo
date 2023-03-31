@@ -21,13 +21,15 @@ public class Libreria {
             try {
                 num = Integer.parseInt(answer);
             } catch (Exception e) {
-                System.err.println("ERROR. Debes introducir solo números.\n");
+                System.err.println("ERROR. Debes introducir solo números.");
+                System.out.println("");
             }
 
             if (num >= start && num <= end) {
                 return num;
             } else {
-                System.err.println("ERROR. Valor fuera de rango\n");
+                System.err.println("ERROR. Valor fuera de rango");
+                System.out.println("");
             }
         }
 
@@ -42,7 +44,8 @@ public class Libreria {
             try {
                 return Integer.parseInt(answer);
             } catch (Exception e) {
-                System.err.println("ERROR. Debes introducir solo números.\n");
+                System.err.println("ERROR. Debes introducir solo números.");
+                System.out.println("");
             }           
         }
 
