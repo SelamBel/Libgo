@@ -70,8 +70,7 @@ public class Libreria {
     /**
      * @param texto: texto que aparecerá cada vez que se pida el dato
      * @return el valor que de el usuario
-     */
-    
+     */   
     public static int getInt(String texto) {
 
         while (true) {
@@ -93,8 +92,7 @@ public class Libreria {
      * @param start: el valor mínimo permitido
      * @param end: el valor máximo permitido
      * @return el valor que de el usuario
-     */
-    
+     */   
     public static double getDouble(String texto, int start, int end) {
 
         while (true) {
@@ -123,8 +121,7 @@ public class Libreria {
      * @param texto: texto que aparecerá cada vez que se pida el dato
      * @param start: el valor mínimo permitido
      * @return el valor que de el usuario
-     */
-    
+     */   
     public static double getDouble(String texto, int start) {
 
         while (true) {
@@ -152,8 +149,7 @@ public class Libreria {
     /**
      * @param texto: texto que aparecerá cada vez que se pida el dato
      * @return el valor que de el usuario
-     */
-    
+     */    
     public static double getDouble(String texto) {
 
         while (true) {
@@ -174,8 +170,7 @@ public class Libreria {
     /**
      * @param texto: texto que aparecerá cada vez que se pida el dato
      * @return el texto que de el usuario
-     */
-    
+     */    
     public static String getLine(String texto) {
         while (true) {
             System.out.println(texto);
