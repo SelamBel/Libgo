@@ -2,9 +2,9 @@ package com.mycompany.libreria;
 import java.util.Scanner;
 
 /**
- * <h1>Pequeña librería que me facilitará el castigo divino que es programar</h1>
+ * Pequeña librería que me facilitará el castigo divino que es programar
  * @author SelamBel
- * @version 1.1.1
+ * @version 1.1.2
  */
 public class Libreria {
     public static Scanner sc = new Scanner(System.in);
@@ -18,16 +18,16 @@ public class Libreria {
     public static int getInt(String texto, int start, int end) {
 
         while (true) {
-            int num = start - 1;
+            int num;
             System.out.println(texto);
-            String answer = sc.nextLine();
 
-            try {
-                num = Integer.parseInt(answer);
-            } catch (Exception e) {
-                System.err.println("ERROR. Debes introducir solo números.");
-                System.out.println("");
+            if (!sc.hasNextInt()) {
+                System.err.println("ERROR. Debes introducir solo números.\n");
+                sc.next();
+                continue;
             }
+            
+            num = sc.nextInt();
 
             if (num >= start && num <= end) {
                 return num;
@@ -47,16 +47,15 @@ public class Libreria {
     public static int getInt(String texto, int start) {
 
         while (true) {
-            int num = start - 1;
+            int num;
             System.out.println(texto);
-            String answer = sc.nextLine();
-
-            try {
-                num = Integer.parseInt(answer);
-            } catch (Exception e) {
-                System.err.println("ERROR. Debes introducir solo números.");
-                System.out.println("");
+            if (!sc.hasNextInt()) {
+                System.err.println("ERROR. Debes introducir solo números.\n");
+                sc.next();
+                continue;
             }
+            
+            num = sc.nextInt();
 
             if (num >= start) {
                 return num;
@@ -76,15 +75,15 @@ public class Libreria {
     public static int getInt(String texto) {
 
         while (true) {
-            System.out.println(texto);
-            String answer = sc.nextLine();
+            System.out.println(texto);           
 
-            try {
-                return Integer.parseInt(answer);
-            } catch (Exception e) {
-                System.err.println("ERROR. Debes introducir solo números.");
-                System.out.println("");
-            }           
+            if (!sc.hasNextInt()) {
+                System.err.println("ERROR. Debes introducir solo números.\n");
+                sc.next();
+                continue;
+            }
+            
+            return sc.nextInt();  
         }
 
     }
@@ -99,16 +98,16 @@ public class Libreria {
     public static double getDouble(String texto, int start, int end) {
 
         while (true) {
-            double num = start - 1;
+            double num;
             System.out.println(texto);
-            String answer = sc.nextLine();
 
-            try {
-                num = Double.parseDouble(answer);
-            } catch (Exception e) {
-                System.err.println("ERROR. Debes introducir solo números (Seperados por un punto si es decimal)");
-                System.out.println("");
+            if (!sc.hasNextDouble()) {
+                System.err.println("ERROR. Debes introducir solo números.\n");
+                sc.next();
+                continue;
             }
+            
+            num = sc.nextDouble();
 
             if (num >= start && num <= end) {
                 return num;
@@ -129,16 +128,16 @@ public class Libreria {
     public static double getDouble(String texto, int start) {
 
         while (true) {
-            double num = start - 1;
+            double num;
             System.out.println(texto);
-            String answer = sc.nextLine();
-
-            try {
-                num = Double.parseDouble(answer);
-            } catch (Exception e) {
-                System.err.println("ERROR. Debes introducir solo números (Seperados por un punto si es decimal)");
-                System.out.println("");
+            
+            if (!sc.hasNextDouble()) {
+                System.err.println("ERROR. Debes introducir solo números.\n");
+                sc.next();
+                continue;
             }
+            
+            num = sc.nextDouble();
 
             if (num >= start) {
                 return num;
@@ -161,12 +160,13 @@ public class Libreria {
             System.out.println(texto);
             String answer = sc.nextLine();
 
-            try {
-                return Double.parseDouble(answer);
-            } catch (Exception e) {
-                System.err.println("ERROR. Debes introducir solo números.");
-                System.out.println("");
-            }           
+            if (!sc.hasNextDouble()) {
+                System.err.println("ERROR. Debes introducir solo números.\n");
+                sc.next();
+                continue;
+            }
+            
+            return sc.nextDouble();          
         }
 
     }
