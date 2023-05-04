@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Pequeña librería que me facilitará el castigo divino que es programar
  * @author SelamBel
- * @version 1.1.2
+ * @version 1.1.3
  */
 public class Libreria {
     public static Scanner sc = new Scanner(System.in);
